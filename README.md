@@ -48,10 +48,13 @@ while True:
  ```
  
 SERVER OUTPUT :
-![BHUVI](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/f85aeebf-2111-4984-8e94-aa2dcdda0174)
+![S](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/6e0ab798-0769-4385-bc51-499f62f2338a)
+
+
 
 CLIENT OUTPUT :
-![C](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/fe87b975-6583-4eab-bcf6-3ca81cc6a3
+![C](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/ead80e17-6a45-4c36-96cf-41688bb9df48)
+
 
 
 RESULT:
