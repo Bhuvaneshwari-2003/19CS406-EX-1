@@ -18,6 +18,7 @@ To write a python program to perform client server model.
 
 # PROGRAM :
 # CLIENT:
+```
 Developed by : S.BHUVANESHWARI
 Register Number : 212221240010
 import socket
@@ -33,8 +34,10 @@ ack=c.recv(1024).decode()
 if ack:
  print(ack)
  c.close()
+ ```
  
  # SERVER:
+ ```
  Developed by : S.BHUVANESHWARI
  Register Number : 212221240010
 import socket
@@ -43,6 +46,7 @@ s.connect(('localhost',8000))
 print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
+```
 
  
 # OUTPUT :
