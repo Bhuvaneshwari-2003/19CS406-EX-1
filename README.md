@@ -16,44 +16,43 @@ ALGORITHM :
 
 
 
-CLIENT PROGRAM :
-```
-## Developed By : S.BHUVANESHWARI
-## Reg No : 212221240010
+PROGRAM :
+CLIENT:
+# Developed by : S.BHUVANESHWARI
+# Register Number : 212221240010
 import socket
+from datetime import datetime
 s=socket.socket()
-s.bind(('localhost',8080))
+s.bind(('localhost',8000))
 s.listen(5)
 c,addr=s.accept()
-while True:
-	i=input("ENter a data:")
-	c.send(i.encode())
-	ack=c.recv(1024).decode()
-	if ack:
-		print(ack)
-		continue
-	else:
-		c.close()
-		break
-    ```
-SERVER PROGRAM :
-```
+print("Client Address : ",addr)
+now = datetime.now()
+c.send(now.strftime("%d/%m/%Y %H:%M:%S").encode())
+ack=c.recv(1024).decode()
+if ack:
+ print(ack)
+ c.close()
+ 
+ SERVER:
+ # Developed by : S.BHUVANESHWARI
+# Register Number : 212221240010
 import socket
 s=socket.socket()
-s.connect(('localhost',8080))
-while True:
-	print(s.recv(1024).decode())
-	s.send("Recieved".encode())
-  
- ```
+s.connect(('localhost',8000))
+print(s.getsockname())
+print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
+
  
-SERVER OUTPUT :
-![S](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/6e0ab798-0769-4385-bc51-499f62f2338a)
+OUTPUT :
+CLIENT :
+![241972511-587fec7f-d45e-4f14-b2bd-37e61ddd1bbf](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/e966cf6f-7175-470e-ad12-960dfb95f6b2)
 
 
+SERVER :
+![241972703-b5a323c0-0b9c-4a89-89f5-6a013b7847c6](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/7b569cdc-0597-4bfe-9605-7842c8bf5dbb)
 
-CLIENT OUTPUT :
-![C](https://github.com/Bhuvaneshwari-2003/19CS406-EX-1/assets/94828604/ead80e17-6a45-4c36-96cf-41688bb9df48)
 
 
 
